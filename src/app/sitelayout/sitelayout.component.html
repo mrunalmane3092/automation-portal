@@ -28,11 +28,7 @@
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <div class="sidenavHeight">
                         <ul class="nav navbar-nav navList">
-                            <li>Buttons</li>
-                            <li>Forms</li>
-                            <li>Modals</li>
-                            <li>Dropdowns</li>
-                            <li>Tables</li>
+                            <li *ngFor="let optns of leftPanelList">{{optns.key}}</li>
                         </ul>
                     </div>
                 </div>

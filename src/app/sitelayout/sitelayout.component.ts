@@ -7,6 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitelayoutComponent implements OnInit {
 
+  leftPanelList = [
+    {
+      "key": "Buttons",
+      "route": ""
+    },
+    {
+      "key": "Forms",
+      "route": ""
+    },
+    {
+      "key": "Modals",
+      "route": ""
+    },
+    {
+      "key": "DropDowns",
+      "route": ""
+    },
+    {
+      "key": "Tables",
+      "route": ""
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
