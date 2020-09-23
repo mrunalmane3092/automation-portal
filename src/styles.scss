@@ -24,7 +24,7 @@ $displays: (
 }
 
 
-$heights: 0, 10, 60, inherit;
+$heights: 0, 10, 50, inherit;
 @each $height in $heights {
     .height#{$height} {
         @if $height==inherit {
