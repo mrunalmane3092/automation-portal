@@ -1,4 +1,13 @@
-<p>sitelayout HEADER!</p>
-<router-outlet></router-outlet>
-<p>sitelayout FOOTER!</p>
+<div class="siteLayout">
+    <p>sitelayout HEADER!</p>
+    <section>
+        <aside id="left-panel" class="left-panel">
+            <div></div>
+        </aside>
+        <div id="right-panel" class="right-panel">
+            <router-outlet></router-outlet>
+            <p>sitelayout FOOTER!</p>
+        </div>
+    </section>
+</div>
 
