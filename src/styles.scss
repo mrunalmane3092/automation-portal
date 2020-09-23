@@ -5,22 +5,37 @@ body {
     margin: 0px;
 }
 
-.siteLayout {
-    display: block;
-    height: 100vh;
-
-    section {
-        display: flex;
-        height: 100%;
+$displays: (
+    "Flex": flex!important,
+    "Block": block!important,
+    "None": none,
+    "InlineFlex": inline-flex,
+    "Initial": initial,
+    "Inline": inline,
+    "Content": contents,
+    "InlineBlock": inline-block,
+    "Inherit": inherit,
+    "Grid": grid,
+);
+@each $name, $dis in $displays {
+    .display#{$name} {
+        display: $dis;
     }
 }
 
-.right-panel {
-    width: 86%;
+
+$heights: 0, 10, 60, inherit;
+@each $height in $heights {
+    .height#{$height} {
+        @if $height==inherit {
+            height: inherit !important;
+        } @else {
+            height: #{$height}px !important;
+        }
+    }
 }
 
-.left-panel {
-    width: 14%;
-    background-color: #26273b;
-
+.width-100-percent{
+    width: 100%;
 }
+

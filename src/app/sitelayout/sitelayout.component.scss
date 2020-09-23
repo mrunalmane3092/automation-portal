@@ -1,0 +1,14 @@
+.siteLayout {
+    display: block;
+    height: 100vh;
+
+    section {
+        display: flex;
+        height: 100%;
+    }
+}
+
+.left-panel {
+    width: 250px;
+    background-color: #26273b;
+}
