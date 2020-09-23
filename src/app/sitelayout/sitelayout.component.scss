@@ -37,15 +37,20 @@
     top:50px;
     position: relative;
     .navbar {
-        padding: 0px;    
-            .navList {
-                li {
-                    height: 50px;
-                    width: 100%;
-                    padding: 12px 15px;
-                    border-bottom: 1px solid #3f405b;
-                }
+        padding: 0px;
+        
+        .navList {
+            li {
+                height: 50px;
+                width: 100%;
+                padding: 15px;
+                border-bottom: 1px solid #3f405b;
             }
+        }
+
+        .main-menu {
+            padding: 0px;
+        }
         
     }
 }
