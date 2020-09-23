@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SitelayoutComponent } from './sitelayout/sitelayout.component';
+import { PortalComponent } from './portal/portal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SitelayoutComponent
+    SitelayoutComponent,
+    PortalComponent
   ],
   imports: [
     BrowserModule,
