@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #f1f2f7;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+.siteLayout {
+    display: block;
+    height: 100vh;
+
+    section {
+        display: flex;
+        height: 100%;
+    }
+}
+
+.right-panel {
+    width: 86%;
+}
+
+.left-panel {
+    width: 14%;
+    background-color: #26273b;
+
+}
