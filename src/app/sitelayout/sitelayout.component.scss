@@ -1,0 +1,34 @@
+
+.siteLayout {
+    display: block;
+    height: 100vh;
+
+    section {
+        display: flex;
+        height: 100%;
+    }
+
+
+    .right-panel {
+        width: 86%;
+    }
+    
+    .left-panel {
+        width: 14%;
+        background-color: #26273b;
+        color: white;
+
+        .navbar {
+            padding: 0px;
+                    
+            .navList {
+                li {
+                    height: 50px;
+                    width: 100%;
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #3f405b;
+                }
+            }
+        }
+    }
+}

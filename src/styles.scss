@@ -4,23 +4,3 @@ body {
     overflow-x: hidden;
     margin: 0px;
 }
-
-.siteLayout {
-    display: block;
-    height: 100vh;
-
-    section {
-        display: flex;
-        height: 100%;
-    }
-}
-
-.right-panel {
-    width: 86%;
-}
-
-.left-panel {
-    width: 14%;
-    background-color: #26273b;
-
-}
