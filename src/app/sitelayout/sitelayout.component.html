@@ -27,7 +27,26 @@
     
     <div class="displayFlex">
         <aside id="left-panel" class="left-panel">
-            <div></div>
+            <nav class="navbar navbar-expand-sm navbar-default nopadding">
+                <!-- <div class="navbar-header">
+                    <button class="navbar-toggler navbar-menuBtn" type="button" data-toggle="collapse"
+                        data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div> -->
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <div class="sidenavHeight">
+                        <ul class="nav navbar-nav navList">
+                            <li>Buttons</li>
+                            <li>Forms</li>
+                            <li>Modals</li>
+                            <li>Dropdowns</li>
+                            <li>Tables</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </aside>
         <div id="right-panel" class="right-panel">
             <router-outlet></router-outlet>

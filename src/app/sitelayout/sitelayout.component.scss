@@ -1,3 +1,4 @@
+
 .siteLayout {
     display: block;
     height: 100vh;
@@ -11,4 +12,23 @@
 .left-panel {
     width: 250px;
     background-color: #26273b;
+    color: white;
+    .navbar {
+        padding: 0px;    
+            .navList {
+                li {
+                    height: 50px;
+                    width: 100%;
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #3f405b;
+                }
+            }
+        
+    }
+}
+
+.right-panel {
+    width: calc(100% - 250px);
+    position: relative;
+    left: 250px;
 }
