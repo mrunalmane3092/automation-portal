@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 declare var $: any;
 @Component({
@@ -10,16 +10,22 @@ export class SearchInputComponent implements OnInit {
 
   searchData = [];
 
+  @Input() elemID: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.elemID)
+    if (this.elemID != undefined){
+      setTimeout(() => {
+        this.getInputSearch(this.elemID);
+      }, 0);
+    }
 
-    this.searchData = [{ title: 'Title 1', img: '/assets/images/organization_42x42.png'},
-                       { title: 'Title 2', img: '/assets/images/organization_42x42.png'}];
+  }
 
-
-    $('#search').autocomplete({
+  getInputSearch(value): void{
+    $('#' + value).autocomplete({
       source: [
         {
           value: 'aaa',
@@ -41,17 +47,19 @@ export class SearchInputComponent implements OnInit {
         }
       ],
       minLength: 0,
-      select:  (event, ui)  => {
-        $('#search').val(ui.item.label);
+      select: (event, ui) => {
+        $('#' + value).val(ui.item.label);
         return false;
       }
     });
-    $('#search').data('ui-autocomplete')._renderItem =  (ul, item) => {
+    $('#' + value).data('ui-autocomplete')._renderItem = (ul, item) => {
       return $('<li/>', { 'data-value': item.label }).append($('<a/>', { href: '#' })
         .append($('<img/>', { src: item.icon, alt: item.label })).append(item.label))
         .appendTo(ul);
     };
   }
+
+
 
 }
 
