@@ -1,0 +1,14 @@
+.buttons-section{
+    display: inline-block;
+    margin: 20px auto;
+    width: 100%;
+    .buttons {
+        display: flex;
+        justify-content: space-around;   
+    
+        .btn {
+            min-width: 200px;
+            border:  none;
+        }
+    }
+}

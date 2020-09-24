@@ -9,6 +9,7 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchInputComponent } from './shared/search-input/search-input.component';
 import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { TableComponent } from './shared/table/table.component';
+import { ModalsComponent } from './shared/modals/modals.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TableComponent } from './shared/table/table.component';
     SearchInputComponent,
     ButtonsComponent,
     TableComponent,
+    ModalsComponent,
   ],
   imports: [
     BrowserModule,
