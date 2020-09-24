@@ -9,6 +9,10 @@ export class SitelayoutComponent implements OnInit {
 
   leftPanelList = [
     {
+      "key": "Search",
+      "route": ""
+    },
+    {
       "key": "Buttons",
       "route": ""
     },
