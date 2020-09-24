@@ -16,6 +16,10 @@
         border: 1px solid #888;
         width: 700px;
         top: 100px;
+
+        .modal-body{
+            margin: 0 -20px;
+        }
     }
 
     .modal-header {
