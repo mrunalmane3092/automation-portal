@@ -17,4 +17,22 @@
            </tr>
         </tbody>
     </table>
+
+
+    <div>
+        <div class="rowHeight headingRow">
+            <span class="col-lg-4">Name</span>
+            <span class="col-lg-4">Salary</span>
+            <span class="col-lg-4">Link</span>
+        </div>
+        <div class="table-body-div">
+            <div *ngFor="let data of tableData; let even = even" [ngStyle]="{'background-color':even ? '' : '#efefef' }"
+                class="rowHeight">
+                <span class="col-lg-4">{{data.name}}</span>
+                <span class="col-lg-4">{{data.salary}}</span>
+                <span class="col-lg-4"><a routerLink="{{data.link}}" class="workflowCrumbs">{{data.link}}</a></span>
+            </div>
+        </div>
+        
+    </div>
 </div>
