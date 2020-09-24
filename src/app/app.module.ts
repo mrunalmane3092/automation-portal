@@ -7,6 +7,7 @@ import { SitelayoutComponent } from './sitelayout/sitelayout.component';
 import { PortalComponent } from './portal/portal.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchInputComponent } from './shared/search-input/search-input.component';
+import { ButtonsComponent } from './shared/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SearchInputComponent } from './shared/search-input/search-input.compone
     PortalComponent,
     DropdownComponent,
     SearchInputComponent,
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,
