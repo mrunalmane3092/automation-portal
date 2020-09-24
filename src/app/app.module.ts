@@ -11,6 +11,7 @@ import { SearchInputComponent } from './shared/search-input/search-input.compone
 import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { TableComponent } from './shared/table/table.component';
 import { ModalsComponent } from './shared/modals/modals.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ModalsComponent } from './shared/modals/modals.component';
     ButtonsComponent,
     TableComponent,
     ModalsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

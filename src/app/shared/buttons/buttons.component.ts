@@ -14,11 +14,12 @@ export class ButtonsComponent implements OnInit {
   }
 
   openNewTab() {
-    window.open('http://localhost:4200/portal');
+    window.open('/about', '_blank');
   }
 
   openNewWindow() {
-    window.open('', '', 'width=600,height=400,left=200,top=200');
+ 
+    window.open('/about', '/about', 'width=800,height=400,left=200,top=200');
   }
 
   constructor() { }

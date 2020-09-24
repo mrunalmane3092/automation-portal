@@ -1,0 +1,19 @@
+.about-section{
+    min-height: calc(100vh - 50px);
+    padding-bottom: 50px;
+
+    .panel-div{
+        margin: 10px 30px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: 1px solid #dcdcdc;
+        display: grid;
+
+        .panel-heading{
+            background-color: #f1f2f7;
+            padding: 11px 20px;
+            border-radius: 4px;
+        }
+    }
+}

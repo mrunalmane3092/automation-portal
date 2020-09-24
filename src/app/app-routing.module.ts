@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SitelayoutComponent } from '../app/sitelayout/sitelayout.component';
 import { PortalComponent } from '../app/portal/portal.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/portal', pathMatch: 'full', },
       { path: 'portal', component: PortalComponent },
+      { path: 'about', component: AboutComponent },
     ],
     runGuardsAndResolvers: 'always'
   },
