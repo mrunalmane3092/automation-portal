@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SitelayoutComponent } from './sitelayout/sitelayout.component';
 import { PortalComponent } from './portal/portal.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SitelayoutComponent,
-    PortalComponent
+    PortalComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
