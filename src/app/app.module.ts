@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SitelayoutComponent } from './sitelayout/sitelayout.component';
 import { PortalComponent } from './portal/portal.component';
+import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchInputComponent } from './shared/search-input/search-input.component';
 import { ButtonsComponent } from './shared/buttons/buttons.component';
 
@@ -13,6 +14,7 @@ import { ButtonsComponent } from './shared/buttons/buttons.component';
     AppComponent,
     SitelayoutComponent,
     PortalComponent,
+    DropdownComponent,
     SearchInputComponent,
     ButtonsComponent,
   ],
