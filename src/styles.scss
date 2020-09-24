@@ -77,6 +77,23 @@ $paddings: 0, 5, 10, 50;
     }
 }
 
+.dataTables_filter{
+    label{
+        float: right!important;
+    }
+}
+.dataTables_length{
+    label{
+        font-size: 13px!important;
+    }
+}
+
+.paging_simple_numbers{
+    .pagination{
+        float: right!important;
+    }
+}
+
 .marginTB-10 {
     margin: 10px 0px;
 }
