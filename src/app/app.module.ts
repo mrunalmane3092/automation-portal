@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { TableComponent } from './shared/table/table.component';
 import { ModalsComponent } from './shared/modals/modals.component';
 import { AboutComponent } from './about/about.component';
+import { FormComponent } from './shared/form/form.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,13 @@ import { AboutComponent } from './about/about.component';
     TableComponent,
     ModalsComponent,
     AboutComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
