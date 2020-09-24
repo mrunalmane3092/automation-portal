@@ -14,6 +14,7 @@ import { TableComponent } from './shared/table/table.component';
 import { ModalsComponent } from './shared/modals/modals.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './shared/form/form.component';
+import { IframesComponent } from './shared/iframes/iframes.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormComponent } from './shared/form/form.component';
     ModalsComponent,
     AboutComponent,
     FormComponent,
+    IframesComponent,
   ],
   imports: [
     BrowserModule,
