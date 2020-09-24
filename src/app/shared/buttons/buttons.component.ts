@@ -17,8 +17,7 @@ export class ButtonsComponent implements OnInit {
     window.open('/about', '_blank');
   }
 
-  openNewWindow() {
- 
+  openNewWindow() { 
     window.open('/about', '/about', 'width=800,height=400,left=200,top=200');
   }
 
