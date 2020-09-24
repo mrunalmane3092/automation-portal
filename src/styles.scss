@@ -105,3 +105,20 @@ $paddings: 0, 5, 10, 50;
 .textAlignCenter {
     text-align: center;
 }
+
+.btn {
+    height: 40px;
+    padding: 0px 15px 1px;
+    border: 1px solid #acadc1;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-size: cover;
+    font-size: 16px;
+    color: #26273b;
+    text-decoration: none solid rgb(38, 39, 59);
+    text-align: center;
+
+    &:focus {
+        outline-offset: 0px!important;
+    }
+}
