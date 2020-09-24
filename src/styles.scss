@@ -35,10 +35,25 @@ $heights: 0, 10, 50, inherit;
     }
 }
 
+$paddings: 0, 5, 10, 50;
+@each $padding in $paddings {
+    .padding#{$padding} {
+        padding: #{$padding}px !important;
+    }
+}
+
 .width-100-percent{
     width: 100%;
 }
 
 .marginTB-10 {
     margin: 10px 0px;
+}
+
+.marginBottom-0 {
+    margin-bottom: 0px;
+}
+
+.textAlignCenter {
+    text-align: center;
 }

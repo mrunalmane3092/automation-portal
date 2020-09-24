@@ -11,8 +11,10 @@ export class DropdownComponent implements OnInit {
 
   selectDropDown;
   selectDropDowncopy;
+  bootstrapDropDown;
+  bootstrapDropDownCopy;
   ngOnInit(): void {
-    this.selectDropDown = [
+    this.selectDropDowncopy = this.selectDropDown = [
       {
         "option": "Drop-Down Option 1",
         "value": "drop-down 1"
@@ -31,22 +33,22 @@ export class DropdownComponent implements OnInit {
       },
     ];
 
-    this.selectDropDowncopy = [
+    this.bootstrapDropDown = this.bootstrapDropDownCopy = [
       {
-        "option": "Drop-Down Option 1",
-        "value": "drop-down 1"
+        "val": "HTML",
+        "link": "#"
       },
       {
-        "option": "Drop-Down Option 2",
-        "value": "drop-down 2"
+        "val": "CSS",
+        "link": "#"
       },
       {
-        "option": "Drop-Down Option 3",
-        "value": "drop-down 3"
+        "val": "JavaScript",
+        "link": "#"
       },
       {
-        "option": "Drop-Down Option 4",
-        "value": "drop-down 4"
+        "val": "PHP",
+        "link": "#"
       },
     ];
   }

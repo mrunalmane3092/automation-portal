@@ -1,6 +1,6 @@
 <div class="col-lg-12 marginTB-10">
-    <div class="row">
-        <div class="col-lg-6 displayGrid">
+    <div class="row textAlignCenter padding10">
+        <div class="col-lg-6 displayBlock">
             <h4>
                 HTML Select drop-down list 1
             </h4>
@@ -8,7 +8,7 @@
                 <option id="optnId_{{i}}" value="{{option.value}}" *ngFor="let option of selectDropDown; index as i">{{option.option}}</option>
             </select>
         </div>
-        <div class="col-lg-6 displayGrid">
+        <div class="col-lg-6 displayBlock">
             <h4>
                 HTML Select drop-down list 2
             </h4>
@@ -17,36 +17,35 @@
             </select>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-6 displayGrid">
+    <div class="row textAlignCenter padding10">
+        <div class="col-lg-6 displayBlock">
             <h4>
                 Bootstrap drop-down list 1
             </h4>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+            <div>
+                <button id="bootstrapDropDown" class="btn btn-primary dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu">
+                    <p class="padding5 marginBottom-0"><a href="#">HTML</a></p>
+                    <p class="padding5 marginBottom-0"><a href="#">CSS</a></p>
+                    <p class="padding5 marginBottom-0"><a href="#">JavaScript</a></p>
+                    <p class="padding5 marginBottom-0"><a href="#">PHP</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 displayGrid">
+        <div class="col-lg-6 displayBlock">
             <h4>
                 Bootstrap drop-down list 2
             </h4>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCopy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+                <button id="bootstrapDropDownCopy" class="btn btn-primary dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonCopy">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-menu">
+                    <p class="padding5 marginBottom-0" *ngFor="let list of bootstrapDropDown; index as i">
+                        <a href="{{list.link}}">{{list.val}}</a>
+                    </p>
                 </div>
-            </div>
         </div>
     </div>
 </div>
