@@ -1,0 +1,23 @@
+
+.padding-TB-30{
+  padding: 30px 0px;
+}
+.search-div{
+  width: 300px;
+  height: 40px;
+  position: relative;
+
+  .search-input{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #b8b8bb;
+    border-radius: 6px;
+    padding: 0 30px 0px 20px;
+  }
+
+  .search-icon{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+}

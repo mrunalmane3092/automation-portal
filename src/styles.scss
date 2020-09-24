@@ -5,6 +5,7 @@ body {
     margin: 0px;
 }
 
+
 $displays: (
     "Flex": flex!important,
     "Block": block!important,
@@ -35,7 +36,55 @@ $heights: 0, 10, 50, inherit;
     }
 }
 
+$sizes: 10, 11, 12, 13, 14, 18, 20, 28;
+@each $size in $sizes {
+    .font#{$size} {
+        font-size: #{$size}px !important;
+    }
+}
+
+$paddings: 0, 5, 10, 50;
+@each $padding in $paddings {
+    .padding#{$padding} {
+        padding: #{$padding}px !important;
+    }
+}
+
 .width-100-percent{
     width: 100%;
 }
 
+
+.alignCenter{
+    align-items: center;
+}
+
+.margin-0-auto{
+    margin: 0 auto;
+}
+
+.ui-autocomplete {
+    font-size: 13px;
+
+    .ui-menu-item{
+        border-bottom: 1px solid #b8b8bb;
+        padding: 5px 0px;
+
+        img{
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.marginTB-10 {
+    margin: 10px 0px;
+}
+
+.marginBottom-0 {
+    margin-bottom: 0px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
