@@ -1,0 +1,10 @@
+.buttons {
+    display: flex;
+    justify-content: space-around;
+
+    .btn {
+        min-width: 100px;
+        height: 40px;
+        border:  none;
+    }
+}
