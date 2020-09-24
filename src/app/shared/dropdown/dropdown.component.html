@@ -27,10 +27,10 @@
                     <span class="caret"></span>
                 </button>
                     <div class="dropdown-menu">
-                    <p class="padding5 marginBottom-0"><a href="#">HTML</a></p>
-                    <p class="padding5 marginBottom-0"><a href="#">CSS</a></p>
-                    <p class="padding5 marginBottom-0"><a href="#">JavaScript</a></p>
-                    <p class="padding5 marginBottom-0"><a href="#">PHP</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_0"><a href="#">HTML</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_1"><a href="#">CSS</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_2"><a href="#">JavaScript</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_3"><a href="#">PHP</a></p>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <span class="caret"></span>
                 </button>
                 <div class="dropdown-menu">
-                    <p class="padding5 marginBottom-0" *ngFor="let list of bootstrapDropDown; index as i">
+                    <p class="padding5 marginBottom-0" id="ddMenu_{{i}}" *ngFor="let list of bootstrapDropDown; index as i">
                         <a href="{{list.link}}">{{list.val}}</a>
                     </p>
                 </div>

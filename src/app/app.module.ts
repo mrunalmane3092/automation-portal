@@ -8,6 +8,7 @@ import { PortalComponent } from './portal/portal.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SearchInputComponent } from './shared/search-input/search-input.component';
 import { ButtonsComponent } from './shared/buttons/buttons.component';
+import { ModalsComponent } from './shared/modals/modals.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ButtonsComponent } from './shared/buttons/buttons.component';
     DropdownComponent,
     SearchInputComponent,
     ButtonsComponent,
+    ModalsComponent,
   ],
   imports: [
     BrowserModule,
