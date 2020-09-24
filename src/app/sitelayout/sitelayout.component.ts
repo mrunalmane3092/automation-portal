@@ -27,6 +27,10 @@ export class SitelayoutComponent implements OnInit {
     {
       "key": "Tables",
       "route": ""
+    },
+    {
+      "key": "IFrames",
+      "route": ""
     }
   ];
 

@@ -28,7 +28,9 @@
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <div class="sidenavHeight">
                         <ul class="nav navbar-nav navList">
-                            <li *ngFor="let optns of leftPanelList">{{optns.key}}</li>
+                            <li *ngFor="let optns of leftPanelList; index as i" id="list_{{i}}">
+                                <span>{{optns.key}}</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
