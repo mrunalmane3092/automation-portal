@@ -151,7 +151,19 @@ subMenu_optns = false;
     } else {
       this.showMore = false;
     }
-    this.hiddenSubMenuLength = $('#submenu li').length;
+
+
+    let len = $('#submenu li').length;
+
+    if (len != 0){
+      localStorage.setItem('COUNT', len);
+    }
+
+    let len_count = localStorage.getItem('COUNT');
+    if (len_count != 0){
+      this.hiddenSubMenuLength = localStorage.getItem('COUNT');
+
+    }
 
 
   }
