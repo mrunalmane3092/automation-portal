@@ -1,4 +1,4 @@
-<section class="siteLayout">
+<section class="siteLayout" (window:resize)="collect()">
     <div class="displayBlock width-100-percent height50 navbar-div" id="navbar_div">
         <div>
             <img class="myGuideLogo" src="../../assets/images/my-guide-logo.png">
@@ -38,12 +38,18 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <button class="dropbtn">More ({{moreArray.length}}) </button>
                             <div class="dropdown-content">
                               <p *ngFor="let data of moreArray">{{data.key}}</p>
                             </div>
-                          </div>
+                          </div> -->
+                        <ol *ngIf="showMore">
+                            <li (click)="showOptns()">
+                                More
+                                <ul id="submenu" *ngIf="subMenu_optns"></ul>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </nav>
