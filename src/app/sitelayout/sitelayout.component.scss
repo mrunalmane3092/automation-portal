@@ -38,7 +38,7 @@
     }
 
     .left-panel {
-        width: 100px;
+        width: 75px;
         background-color: #26273b;
         color: white;
         top:50px;
@@ -53,6 +53,9 @@
                     width: 100%;
                     // padding: 15px;
                     border-bottom: 1px solid #3f405b;
+                    
+
+                    font-size: 12px;
                     // padding-left: 30px;
                 }
 
@@ -61,7 +64,9 @@
                 }
 
                 i {
-                    font-size: 20px;
+                    font-size: 15px;
+                    font-weight: normal;
+                    margin-bottom: 10px;
                 }
             }
     
@@ -73,10 +78,10 @@
     }
     
     .right-panel {
-        width: calc(100% - 100px);
+        width: calc(100% - 75px);
         top:50px;
         position: relative;
-        left: 100px;
+        left: 75px;
         .footer {
             background: #fff;
             float: left;
