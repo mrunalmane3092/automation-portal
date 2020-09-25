@@ -1,12 +1,13 @@
 
-<div>
-    Embedded Video Iframe:
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/-UqqYmYVXLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="fluid-container">
+    <h5 class="frame-title"> Embedded Video Iframe: </h5>
+    <iframe class="iframe-style" height="400" src="https://www.youtube.com/embed/-UqqYmYVXLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<!-- <div class="fluid-container">
+    <h5 class="frame-title"> wikipedia Iframe: </h5>
+    <iframe class="iframe-style" src="https://fr.wikipedia.org/wiki/Main_Page" height="480" frameborder="0"></iframe>
+</div> -->
 <div>
-    wikipedia Iframe:
-    <iframe src="https://fr.wikipedia.org/wiki/Main_Page" width="100%" height="480" frameborder="0"></iframe>
-</div>
-<div>
-    <iframe [src]="iFrameUrl" height="300" width="100%" id="FirstIframe" frameborder="0"></iframe>
+    <h5 class="frame-title">Inbuilt Iframe: </h5> 
+    <iframe class="iframe-style" [src]="iFrameUrl" height="300" id="FirstIframe" frameborder="0"></iframe>
 </div>
