@@ -113,17 +113,25 @@ $paddings: 0, 5, 10, 50;
 .btn {
     height: 40px;
     padding: 0px 15px 1px;
-    border: 1px solid #acadc1;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: #38b6a0;
     background-size: cover;
     font-size: 16px;
-    color: #26273b;
-    text-decoration: none solid rgb(38, 39, 59);
+    color: #ffffff!important;
+    text-decoration: none solid rgb(255, 255, 255)!important;
     text-align: center;
+    outline-offset: 0px!important;
+
+    &:hover {
+        background-color: #2f9987;
+    }
 
     &:focus {
-        outline-offset: 0px!important;
+        background-color: #288070;
+    }
+
+    &:active {
+        background-color: #2b6c60;
     }
 }
 
