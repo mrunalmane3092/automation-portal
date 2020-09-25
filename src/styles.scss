@@ -126,3 +126,10 @@ $paddings: 0, 5, 10, 50;
         outline-offset: 0px!important;
     }
 }
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: inherit!important;
+}
+.navbar-nav>li>.dropdown-menu {
+    transform: translate3d(-42px, 49px, 0px)!important;
+}
