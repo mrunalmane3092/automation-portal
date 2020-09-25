@@ -31,10 +31,10 @@
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <div class="sidenavHeight">
                         <ul class="nav navbar-nav navList" id="menu">
-                            <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="list_{{i}}" class="pointer">
-                                <div class="displayGrid textAlignCenter">
+                            <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="li_{{optns.component}}" class="pointer">
+                                <div class="displayGrid textAlignCenter"  id="div_{{optns.component}}">
                                     <i class="{{optns.icon}}" aria-hidden="true"></i>
-                                    <span>{{optns.key}}</span>
+                                    <span  id="span_{{optns.component}}">{{optns.key}}</span>
                                 </div>
                             </li>
                         </ul>

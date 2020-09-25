@@ -72,7 +72,7 @@ subMenu_optns = false;
   }
 
   scrollIntoView(component) {
-
+    console.log('inside scroll to view')
     if (!this.router.url.includes('portal')) {
       this.router.navigate(['/portal']);
     }
@@ -161,6 +161,13 @@ subMenu_optns = false;
             $('#submenu').hide();
           }
         } 
+
+        $("ul#submenu").on('click', 'li', function(e) {
+          var component = $(this).attr("id").split('_')[1];
+          console.log(component)
+          this.scrollIntoView('searchComponent');
+        });
+
     }
 
 
