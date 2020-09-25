@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modals.component.scss']
 })
 export class ModalsComponent implements OnInit {
-  loadForm = false;
   constructor(
   ) { }
 
@@ -16,13 +15,11 @@ export class ModalsComponent implements OnInit {
   openModal(id) {
     var modal = document.getElementById(id);
     modal.style.display = "block";
-    this.loadForm = true;
   }
   
   closeModal(id) {
     var modal = document.getElementById(id);
     modal.style.display = "none";
-    this.loadForm = false;
   }
 
   
