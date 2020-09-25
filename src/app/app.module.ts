@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { FormComponent } from './shared/form/form.component';
 import { IframesComponent } from './shared/iframes/iframes.component';
 import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
+import { WindowComponent } from './shared/window/window.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
     FormComponent,
     IframesComponent,
     SubIframeComponent,
+    WindowComponent,
   ],
   imports: [
     BrowserModule,

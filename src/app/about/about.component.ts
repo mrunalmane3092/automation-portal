@@ -7,14 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  closeWindow() {
-    window.close();
-  }
-
-  isPopupWindow(){
-    return window.opener;
-  }
-
   openNewTab(){
     window.open('https://myguide.org/digital-adoption-platform', '_blank');
   }

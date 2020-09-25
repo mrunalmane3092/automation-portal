@@ -4,7 +4,7 @@ import { SitelayoutComponent } from '../app/sitelayout/sitelayout.component';
 import { PortalComponent } from '../app/portal/portal.component';
 import { AboutComponent } from './about/about.component';
 import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
-
+import { WindowComponent } from './shared/window/window.component';
 
 const routes: Routes = [
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always'
   },
   { path: 'iframe1', component: SubIframeComponent },
-
+  { path: 'window', component: WindowComponent },
   {
     path: '**',
     redirectTo: 'portal'
