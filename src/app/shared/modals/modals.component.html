@@ -12,7 +12,7 @@
                     <app-search-input elemID="modal_search"></app-search-input>
                 </div>
                 <div class="formComponent">
-                    <app-form></app-form>
+                    <app-form *ngIf="loadForm"></app-form>
                 </div>
             </div>
         </div>
