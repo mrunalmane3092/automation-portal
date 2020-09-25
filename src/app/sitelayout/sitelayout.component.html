@@ -32,7 +32,10 @@
                     <div class="sidenavHeight">
                         <ul class="nav navbar-nav navList">
                             <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="list_{{i}}" class="pointer">
-                                <span>{{optns.key}}</span>
+                                <div class="displayGrid textAlignCenter">
+                                    <i class="{{optns.icon}}" aria-hidden="true"></i>
+                                    <span>{{optns.key}}</span>
+                                </div>
                             </li>
                         </ul>
                     </div>

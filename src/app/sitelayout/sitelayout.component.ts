@@ -13,31 +13,38 @@ export class SitelayoutComponent implements OnInit {
   leftPanelList = [
     {
       "key": "Search",
-      "component": "searchComponent"
+      "component": "searchComponent",
+      "icon": "fa fa-search"
     },
     {
       "key": "DropDown",
-      "component": "dropdownComponent"
+      "component": "dropdownComponent",
+      "icon": "fa fa-caret-square-o-down"
     },
     {
       "key": "Buttons",
-      "component": "buttonComponent"
+      "component": "buttonComponent",
+      "icon": "fa fa-square"
     },
     {
       "key": "Modal",
-      "component": "modalComponent"
+      "component": "modalComponent",
+      "icon": "fa fa-window-maximize"
     },
     {
       "key": "Table",
-      "component": "tableComponent"
+      "component": "tableComponent",
+      "icon": "fa fa-table"
     },
     {
       "key": "Form",
-      "component": "formComponent"
+      "component": "formComponent",
+      "icon": "fa fa-list-alt"
     },
     {
       "key": "IFrames",
-      "component": "iframeComponent"
+      "component": "iframeComponent",
+      "icon": "fa fa-window-restore"
     }
   ];
 

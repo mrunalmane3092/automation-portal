@@ -38,7 +38,7 @@
     }
 
     .left-panel {
-        width: 250px;
+        width: 100px;
         background-color: #26273b;
         color: white;
         top:50px;
@@ -49,11 +49,19 @@
             
             .navList {
                 li {
-                    height: 50px;
+                    height: 80px;
                     width: 100%;
-                    padding: 15px;
+                    // padding: 15px;
                     border-bottom: 1px solid #3f405b;
-                    padding-left: 30px;
+                    // padding-left: 30px;
+                }
+
+                div {
+                    margin: 18px auto;
+                }
+
+                i {
+                    font-size: 20px;
                 }
             }
     
@@ -65,10 +73,10 @@
     }
     
     .right-panel {
-        width: calc(100% - 250px);
+        width: calc(100% - 100px);
         top:50px;
         position: relative;
-        left: 250px;
+        left: 100px;
         .footer {
             background: #fff;
             float: left;

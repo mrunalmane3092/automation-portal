@@ -36,19 +36,19 @@ export class DropdownComponent implements OnInit {
     this.bootstrapDropDown = this.bootstrapDropDownCopy = [
       {
         "val": "HTML",
-        "link": "#"
+        "link": ""
       },
       {
         "val": "CSS",
-        "link": "#"
+        "link": ""
       },
       {
         "val": "JavaScript",
-        "link": "#"
+        "link": ""
       },
       {
         "val": "PHP",
-        "link": "#"
+        "link": ""
       },
     ];
   }
