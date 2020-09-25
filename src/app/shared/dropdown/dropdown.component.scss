@@ -1,5 +1,5 @@
 .selectList {
-    width: 150px;
+    width: 200px;
     padding: 5px;
     margin: 10px;
 }
@@ -16,4 +16,8 @@
     left: 135px!important;
     width: 200px!important;
     transform: translate3d(0px, -0px, 0px)!important;
+
+    p:hover {
+        background-color: #74ccbd;
+    }
 }
