@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 declare var $: any;
 
 @Component({
@@ -39,24 +41,33 @@ export class SitelayoutComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.scrollIntoView('searchComponent');
   }
 
   scrollIntoView(component) {
 
-    const element = document.getElementById(component);
-    const offset = 60;
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const elementRect = element.getBoundingClientRect().top;
-    const elementPosition = elementRect - bodyRect;
-    const offsetPosition = elementPosition - offset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
+    if (!this.router.url.includes('portal')) {
+      this.router.navigate(['/portal']);
+    }
     
+    setTimeout(() => {
+      const element = document.getElementById(component);
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }, 0);
+
   }
 }
