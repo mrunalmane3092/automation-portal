@@ -5,6 +5,9 @@ body {
     margin: 0px;
 }
 
+button, li, input, a, select {
+    outline: none!important;
+}
 
 $displays: (
     "Flex": flex!important,
