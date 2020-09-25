@@ -15,6 +15,7 @@ import { ModalsComponent } from './shared/modals/modals.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './shared/form/form.component';
 import { IframesComponent } from './shared/iframes/iframes.component';
+import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { IframesComponent } from './shared/iframes/iframes.component';
     AboutComponent,
     FormComponent,
     IframesComponent,
+    SubIframeComponent,
   ],
   imports: [
     BrowserModule,
