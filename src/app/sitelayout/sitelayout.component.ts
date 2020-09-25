@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 declare var $: any;
@@ -55,6 +55,7 @@ subMenu_optns = false;
   ];
 
   constructor(
+    private eRef: ElementRef,
     private router: Router
   ) { }
 
@@ -104,20 +105,27 @@ subMenu_optns = false;
     this.elemHeight = menu.height();
     this.fixedHeight = 90;
 
-
     this.fitCount = Math.floor(height / this.fixedHeight) - 1;
-
 
     let collectedSet = menu.children(":gt(" + this.fitCount + ")");
     $('#submenu').empty().append(collectedSet.clone());
 
-    console.log(this.fitCount);
     if (this.fitCount < 6) {
       this.showMore = true;
     } else {
       this.showMore = false;
     }
   }
+
+  	@HostListener('click', ['$event'])
+    onClick(event) {
+        if (this.eRef.nativeElement.contains(event.target)) {
+          console.log($(event.target));
+          if ($(event.target)[0] != $('#submenu span')[0] && $(event.target)[0] != $('#more_btn')[0]) {
+            $('#submenu').hide();
+          }
+        } 
+    }
 
 
 
