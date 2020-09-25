@@ -5,6 +5,9 @@ body {
     margin: 0px;
 }
 
+button, li, input, a, select {
+    outline: none!important;
+}
 
 $displays: (
     "Flex": flex!important,
@@ -175,7 +178,7 @@ a {
 .pagination>.active>a:hover, .pagination>.active>span, 
 .pagination>.active>span:focus, .pagination>.active>span:hover {
     z-index: 3;
-    color: #fff;
+    color: #fff!important;
     cursor: default;
     background-color: #38b6a0!important;
     border-color: #38b6a0!important;
