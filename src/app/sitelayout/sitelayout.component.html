@@ -39,9 +39,9 @@
                             </li>
                         </ul>
                         <ol *ngIf="showMore">
-                            <li (click)="showOptns()">
-                                More
-                                <ul id="submenu" *ngIf="subMenu_optns"></ul>
+                            <li>
+                                <span (click)="showOptns()" id="more_btn">More</span>
+                                <ul id="submenu"></ul>
                             </li>
                         </ol>
                     </div>

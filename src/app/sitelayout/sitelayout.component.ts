@@ -89,7 +89,9 @@ subMenu_optns = false;
 
 
   showOptns(){
+    this.collect();
     this.subMenu_optns = true;
+    $('#submenu').show();
   }
 
 
@@ -112,6 +114,8 @@ subMenu_optns = false;
     console.log(this.fitCount);
     if (this.fitCount < 6) {
       this.showMore = true;
+    } else {
+      this.showMore = false;
     }
   }
 
