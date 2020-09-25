@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 declare var $: any;
@@ -9,6 +9,12 @@ declare var $: any;
   styleUrls: ['./sitelayout.component.scss']
 })
 export class SitelayoutComponent implements OnInit {
+
+elemHeight;
+fitCount;
+fixedHeight = 120;
+showMore = false;
+subMenu_optns = false;
 
   leftPanelList = [
     {
@@ -54,6 +60,9 @@ export class SitelayoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.scrollIntoView('searchComponent');
+
+    this.collect();
+    $(window).resize(this.collect);
   }
 
   scrollIntoView(component) {
@@ -77,4 +86,35 @@ export class SitelayoutComponent implements OnInit {
     }, 0);
 
   }
+
+
+  showOptns(){
+    this.subMenu_optns = true;
+  }
+
+
+
+
+  @HostListener('window:resize', ['$event'])
+  collect() {
+    let height = window.innerHeight;
+    const menu = $('ul#menu');
+    this.elemHeight = menu.height();
+    this.fixedHeight = 90;
+
+
+    this.fitCount = Math.floor(height / this.fixedHeight) - 1;
+
+
+    let collectedSet = menu.children(":gt(" + this.fitCount + ")");
+    $('#submenu').empty().append(collectedSet.clone());
+
+    console.log(this.fitCount);
+    if (this.fitCount < 6) {
+      this.showMore = true;
+    }
+  }
+
+
+
 }

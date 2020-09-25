@@ -1,4 +1,4 @@
-<section class="siteLayout">
+<section class="siteLayout" (window:resize)="collect()">
     <div class="displayBlock width-100-percent height50 navbar-div" id="navbar_div">
         <div>
             <img class="myGuideLogo" src="../../assets/images/my-guide-logo.png">
@@ -30,7 +30,7 @@
                 </div> -->
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <div class="sidenavHeight">
-                        <ul class="nav navbar-nav navList">
+                        <ul class="nav navbar-nav navList" id="menu">
                             <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="list_{{i}}" class="pointer">
                                 <div class="displayGrid textAlignCenter">
                                     <i class="{{optns.icon}}" aria-hidden="true"></i>
@@ -38,7 +38,12 @@
                                 </div>
                             </li>
                         </ul>
-                        <button>More</button>
+                        <ol *ngIf="showMore">
+                            <li (click)="showOptns()">
+                                More
+                                <ul id="submenu" *ngIf="subMenu_optns"></ul>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </nav>
