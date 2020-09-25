@@ -27,25 +27,23 @@ export class FormComponent implements OnInit {
   });
 
   showForm = false;
+  form_type;
 
   get aliases() {
     return this.profileForm.get('aliases') as FormArray;
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) { 
+
+  }
 
   ngOnInit(): void {
+    console.log(this.formID);
+    setTimeout(() => {
+      this.form_type = this.formID;
+      this.showForm = true;
+    }, 10);
 
-   
-
-      setTimeout(() => {
-        if (this.formID != undefined) {
-        console.log(this.formID);
-
-        this.showForm = true;
-    }
-
-      }, 100);
   }
 
 
