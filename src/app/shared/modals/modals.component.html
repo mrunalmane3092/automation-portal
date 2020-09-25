@@ -1,7 +1,7 @@
 
 <div class="col-lg-12 row marginTB-10">
     <button class="btn modalBtn" id="htmlModalBtn" (click)="openModal('htmlModal')">Open HTML Modal</button>
-    <div id="htmlModal" class="modal">
+    <div id="htmlModal" class="modal" *ngIf="modalShow">
         <div class="modal-content modalContent">
             <div class="modal-header">
                 <span class="close" (click)="closeModal('htmlModal')">&times;</span>
@@ -12,7 +12,7 @@
                     <app-search-input elemID="modal_search"></app-search-input>
                 </div>
                 <div class="formComponent">
-                    <app-form></app-form>
+                    <app-form formID="modal_form"></app-form>
                 </div>
             </div>
         </div>

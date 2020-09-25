@@ -1,16 +1,16 @@
-<div>
+<div *ngIf="showForm">
     <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="info-form">
         <div class="form-group">
             <label for="firstName" class="width-100-percent font13">
                 First Name:
-                <input type="text" formControlName="firstName" id="firstName" class="form-control" required>
+                <input type="text" formControlName="firstName" id="{{this.elemID}}_firstName" class="form-control" required>
             </label>
         </div>
 
         <div class="form-group">
             <label for="lastName" class="width-100-percent font13">
                 Last Name:
-                <input type="text" formControlName="lastName" id="lastName" class="form-control">
+                <input type="text" formControlName="lastName" id="{{this.elemID}}_lastName" class="form-control">
             </label>
         </div>
 
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="street" class="width-100-percent font13">
                     Street:
-                    <textarea type="text" formControlName="street" id="street" class="form-control"></textarea>
+                    <textarea type="text" formControlName="street" id="{{this.elemID}}_street" class="form-control"></textarea>
                 </label>
             </div>
 
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label for="city" class="width-100-percent font13">
                     City:
-                    <input type="text" formControlName="city" id="city" class="form-control">
+                    <input type="text" formControlName="city" id="{{this.elemID}}_city" class="form-control">
                 </label>
             </div>
         </div>
@@ -36,19 +36,19 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{this.elemID}}_exampleRadios1" value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Option 1
                     </label>
                 </div>
                 <div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{this.elemID}}_exampleRadios2" value="option2">
                     <label class="form-check-label" for="exampleRadios2">
                         Option 2
                     </label>
                 </div>
                 <div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{this.elemID}}_exampleRadios3" value="option3">
                     <label class="form-check-label" for="exampleRadios3">
                         Option 3
                     </label>
@@ -56,22 +56,22 @@
             </div>
             <div class="col-lg-6">
                 <div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="defaultCheck1">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{this.elemID}}_defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                         Checkbox 1
                     </label>
                 </div><div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="defaultCheck2">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{this.elemID}}_defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
                         Checkbox 2
                     </label>
                 </div><div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="defaultCheck3">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{this.elemID}}_defaultCheck3">
                     <label class="form-check-label" for="defaultCheck3">
                         Checkbox 3
                     </label>
                 </div><div class="form-check displayFlex">
-                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="defaultCheck4">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{this.elemID}}_defaultCheck4">
                     <label class="form-check-label" for="defaultCheck4">
                         Checkbox 4
                     </label>
@@ -89,7 +89,7 @@
                 <div class="form-group">
                     <label class="width-100-percent">
                         Alias:
-                        <input type="text" [formControlName]="i" id="i">
+                        <input type="text" [formControlName]="i" id="{{this.elemID}}_i">
                     </label>
                 </div> 
             </div>

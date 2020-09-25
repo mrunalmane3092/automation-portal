@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
@@ -9,6 +9,8 @@ import { FormArray } from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+
+  @Input() formID: any;
 
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
@@ -24,6 +26,8 @@ export class FormComponent implements OnInit {
     ])
   });
 
+  showForm = false;
+
   get aliases() {
     return this.profileForm.get('aliases') as FormArray;
   }
@@ -31,16 +35,19 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+
+   
+
+      setTimeout(() => {
+        if (this.formID != undefined) {
+        console.log(this.formID);
+
+        this.showForm = true;
+    }
+
+      }, 100);
   }
 
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
-    });
-  }
 
   addAlias() {
     this.aliases.push(this.fb.control(''));
