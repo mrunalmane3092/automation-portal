@@ -15,6 +15,8 @@ export class FormComponent implements OnInit {
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
+    contact_num: [''],
+    dob: [''],
     address: this.fb.group({
       street: [''],
       city: [''],
