@@ -141,6 +141,7 @@ ol{
     font-size: 13px;
     border-top: 1px solid #3f405b;
     font-weight: 600;
+    cursor: pointer;
 
     li{
         background-color: #26273b;
@@ -171,6 +172,7 @@ ol{
 }
 
 #submenu{
+    display: none;
     i {
         display: none;
     }

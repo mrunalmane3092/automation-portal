@@ -124,7 +124,9 @@ subMenu_optns = false;
   // }
 
   showOptns(){
+    this.collect();
     this.subMenu_optns = true;
+    $('#submenu').show();
   }
 
 
@@ -148,6 +150,8 @@ subMenu_optns = false;
 
     if (this.fitCount < 6) {
       this.showMore = true;
+    } else {
+      this.showMore = false;
     }
 
   }
