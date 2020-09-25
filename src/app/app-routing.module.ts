@@ -13,11 +13,11 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/portal', pathMatch: 'full', },
       { path: 'portal', component: PortalComponent },
-      { path: 'about', component: AboutComponent },
-      { path: 'iframe1', component: SubIframeComponent}
+      { path: 'about', component: AboutComponent },      
     ],
     runGuardsAndResolvers: 'always'
   },
+  { path: 'iframe1', component: SubIframeComponent },
 
   {
     path: '**',
