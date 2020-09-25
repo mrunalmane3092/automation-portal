@@ -120,7 +120,7 @@ $paddings: 0, 5, 10, 50;
     color: #ffffff!important;
     text-decoration: none solid rgb(255, 255, 255)!important;
     text-align: center;
-    outline-offset: 0px!important;
+    outline: none!important;
 
     &:hover {
         background-color: #2f9987;
