@@ -30,7 +30,7 @@
                 </div> -->
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <div class="sidenavHeight">
-                        <ul class="nav navbar-nav navList">
+                        <ul class="nav navbar-nav navList" id="menu">
                             <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="list_{{i}}" class="pointer">
                                 <div class="displayGrid textAlignCenter">
                                     <i class="{{optns.icon}}" aria-hidden="true"></i>
@@ -38,7 +38,12 @@
                                 </div>
                             </li>
                         </ul>
-                        <button>More</button>
+                        <div class="dropdown">
+                            <button class="dropbtn">More ({{moreArray.length}}) </button>
+                            <div class="dropdown-content">
+                              <p *ngFor="let data of moreArray">{{data.key}}</p>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </nav>
