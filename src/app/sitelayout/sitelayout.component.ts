@@ -18,57 +18,6 @@ subMenu_optns = false;
 
 //  windowHeight = window.innerHeight;
   // newleftPanelList = [
-  // leftPanelList = [
-  //   {
-  //     "key": "Search",
-  //     "component": "searchComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/search.png"
-  //   },
-  //   {
-  //     "key": "DropDown",
-  //     "component": "dropdownComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/dropdown.png"
-  //   },
-  //   {
-  //     "key": "Buttons",
-  //     "component": "buttonComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/button.png"
-  //   },
-  //   {
-  //     "key": "Modal",
-  //     "component": "modalComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/modal.png"
-  //   },
-  //   {
-  //     "key": "Table",
-  //     "component": "tableComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/table.png"
-  //   },
-  //   {
-  //     "key": "Form",
-  //     "component": "formComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/form.png"
-  //   },
-  //   {
-  //     "key": "IFrames",
-  //     "component": "iframeComponent",
-  //     "route": "",
-  //     "icon": "../../assets/images/left-panel/iframe.png"
-  //   },
-  //   {
-  //     "key": "Load Testing",
-  //     "component": "",
-  //     "route": "/load-testing",
-  //     "icon": "../../assets/images/left-panel/testing.png"
-  //   }
-  // ];
-
 
   leftPanelList= [
   {
