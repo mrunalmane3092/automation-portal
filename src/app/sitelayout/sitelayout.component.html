@@ -32,8 +32,8 @@
                     <div class="sidenavHeight">
                         <ul class="nav navbar-nav navList" id="menu">
                             <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="li_{{optns.component}}" class="pointer">
-                                <a class="displayGrid textAlignCenter textColorWhite" *ngIf="optns.route != ''" href="{{optns.route}}" id="a_{{optns.component}}">
-                                    <i class="{{optns.icon}}" aria-hidden="true"></i>
+                                <a class="displayGrid textAlignCenter textColorWhite padding2" *ngIf="optns.route != ''" href="{{optns.route}}" id="a_{{optns.component}}">
+                                    <i class="{{optns.icon}} displayBlock" aria-hidden="true"></i>
                                     <span  id="span_{{optns.component}}">{{optns.key}}</span>
                                 </a>
                                 <div class="displayGrid textAlignCenter" *ngIf="optns.route == ''" id="div_{{optns.component}}">

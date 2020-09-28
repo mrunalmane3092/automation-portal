@@ -46,7 +46,7 @@ $sizes: 10, 11, 12, 13, 14, 18, 20, 28;
     }
 }
 
-$paddings: 0, 5, 10, 50;
+$paddings: 0, 2, 5, 10, 50;
 @each $padding in $paddings {
     .padding#{$padding} {
         padding: #{$padding}px !important;
