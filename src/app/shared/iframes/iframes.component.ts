@@ -18,7 +18,7 @@ export class IframesComponent implements OnInit {
 
 
   constructor(private sanitizer: DomSanitizer) {
-    this.iFrameUrl=  this.sanitizer.bypassSecurityTrustResourceUrl('/iframe1')
+    this.iFrameUrl=  this.sanitizer.bypassSecurityTrustResourceUrl('/iframe1');
    }
 
   ngOnInit(): void {

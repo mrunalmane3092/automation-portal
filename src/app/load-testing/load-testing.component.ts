@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./load-testing.component.scss']
 })
 export class LoadTestingComponent implements OnInit {
-  array = new Array<number>(2);
+  array = new Array<number>(10);
   constructor() { }
 
   ngOnInit(): void {
