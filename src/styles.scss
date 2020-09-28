@@ -109,6 +109,10 @@ $paddings: 0, 2, 5, 10, 50;
     margin-bottom: 0px;
 }
 
+.marginAuto {
+    margin: auto;
+}
+
 .textAlignCenter {
     text-align: center;
 }
@@ -182,4 +186,7 @@ a {
     cursor: default;
     background-color: #38b6a0!important;
     border-color: #38b6a0!important;
+}
+#submenu .leftPanelIcon {
+    display:none;
 }

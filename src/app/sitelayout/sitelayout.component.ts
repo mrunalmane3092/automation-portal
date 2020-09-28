@@ -18,56 +18,110 @@ subMenu_optns = false;
 
 //  windowHeight = window.innerHeight;
   // newleftPanelList = [
-  leftPanelList = [
-    {
-      "key": "Search",
-      "component": "searchComponent",
-      "route": "",
-      "icon": "fa fa-search"
-    },
-    {
-      "key": "DropDown",
-      "component": "dropdownComponent",
-      "route": "",
-      "icon": "fa fa-caret-square-o-down"
-    },
-    {
-      "key": "Buttons",
-      "component": "buttonComponent",
-      "route": "",
-      "icon": "fa fa-square"
-    },
-    {
-      "key": "Modal",
-      "component": "modalComponent",
-      "route": "",
-      "icon": "fa fa-window-maximize"
-    },
-    {
-      "key": "Table",
-      "component": "tableComponent",
-      "route": "",
-      "icon": "fa fa-table"
-    },
-    {
-      "key": "Form",
-      "component": "formComponent",
-      "route": "",
-      "icon": "fa fa-list-alt"
-    },
-    {
-      "key": "IFrames",
-      "component": "iframeComponent",
-      "route": "",
-      "icon": "fa fa-window-restore"
-    },
-    {
-      "key": "Load Testing",
-      "component": "",
-      "route": "/load-testing",
-      "icon": "fa fa-window-restore"
-    }
+  // leftPanelList = [
+  //   {
+  //     "key": "Search",
+  //     "component": "searchComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/search.png"
+  //   },
+  //   {
+  //     "key": "DropDown",
+  //     "component": "dropdownComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/dropdown.png"
+  //   },
+  //   {
+  //     "key": "Buttons",
+  //     "component": "buttonComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/button.png"
+  //   },
+  //   {
+  //     "key": "Modal",
+  //     "component": "modalComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/modal.png"
+  //   },
+  //   {
+  //     "key": "Table",
+  //     "component": "tableComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/table.png"
+  //   },
+  //   {
+  //     "key": "Form",
+  //     "component": "formComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/form.png"
+  //   },
+  //   {
+  //     "key": "IFrames",
+  //     "component": "iframeComponent",
+  //     "route": "",
+  //     "icon": "../../assets/images/left-panel/iframe.png"
+  //   },
+  //   {
+  //     "key": "Load Testing",
+  //     "component": "",
+  //     "route": "/load-testing",
+  //     "icon": "../../assets/images/left-panel/testing.png"
+  //   }
+  // ];
+
+
+  leftPanelList= [
+  {
+  "key": "Search",
+  "component": "searchComponent",
+  "route": "",
+  "icon": "fa fa-search"
+  },
+  {
+  "key": "DropDown",
+  "component": "dropdownComponent",
+  "route": "",
+  "icon": "fa fa-caret-square-o-down"
+  },
+  {
+  "key": "Buttons",
+  "component": "buttonComponent",
+  "route": "",
+  "icon": "fa fa-square"
+  },
+  {
+  "key": "Modal",
+  "component": "modalComponent",
+  "route": "",
+  "icon": "fa fa-window-maximize"
+  },
+  {
+  "key": "Table",
+  "component": "tableComponent",
+  "route": "",
+  "icon": "fa fa-table"
+  },
+  {
+  "key": "Form",
+  "component": "formComponent",
+  "route": "",
+  "icon": "fa fa-list-alt"
+  },
+  {
+  "key": "IFrames",
+  "component": "iframeComponent",
+  "route": "",
+  "icon": "fa fa-window-restore"
+  },
+  {
+  "key": "Load Testing",
+  "component": "",
+  "route": "/load-testing",
+  "icon": "fa fa-window-restore"
+  }
   ];
+
+
   // leftPanelList;
   // moreArray=[];
   hiddenSubMenuLength;
@@ -148,6 +202,8 @@ subMenu_optns = false;
 
   @HostListener('window:resize', ['$event'])
   collect() {
+    $('#submenu .leftPanelIcon').css('display', 'none');
+
     if (this.leftPanelList != undefined) {
 
       const leftPanelViewLength = this.leftPanelList.length - 1;
@@ -183,7 +239,7 @@ subMenu_optns = false;
 
 
 
-  	@HostListener('click', ['$event'])
+    @HostListener('click', ['$event'])
     onClick(event) {
         if (this.eRef.nativeElement.contains(event.target)) {
           console.log($(event.target));
