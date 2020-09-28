@@ -152,8 +152,6 @@ subMenu_optns = false;
       this.showMore = false;
     }
     this.hiddenSubMenuLength = $('#submenu li').length;
-
-
   }
 
 
