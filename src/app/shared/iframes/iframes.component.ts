@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -8,13 +8,26 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class IframesComponent implements OnInit {
 
+  @Input() iframeID: any;
+
   iFrameUrl: SafeResourceUrl;
+
+
+  showIframe = false;
+  iframe_id;
+
 
   constructor(private sanitizer: DomSanitizer) {
     this.iFrameUrl=  this.sanitizer.bypassSecurityTrustResourceUrl('/iframe1')
    }
 
   ngOnInit(): void {
+
+    console.log(this.iframeID);
+    setTimeout(() => {
+      this.iframe_id = this.iframeID;
+      this.showIframe = true;
+    }, 10);
   }
   
 }
