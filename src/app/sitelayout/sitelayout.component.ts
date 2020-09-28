@@ -22,36 +22,49 @@ subMenu_optns = false;
     {
       "key": "Search",
       "component": "searchComponent",
+      "route": "",
       "icon": "fa fa-search"
     },
     {
       "key": "DropDown",
       "component": "dropdownComponent",
+      "route": "",
       "icon": "fa fa-caret-square-o-down"
     },
     {
       "key": "Buttons",
       "component": "buttonComponent",
+      "route": "",
       "icon": "fa fa-square"
     },
     {
       "key": "Modal",
       "component": "modalComponent",
+      "route": "",
       "icon": "fa fa-window-maximize"
     },
     {
       "key": "Table",
       "component": "tableComponent",
+      "route": "",
       "icon": "fa fa-table"
     },
     {
       "key": "Form",
       "component": "formComponent",
+      "route": "",
       "icon": "fa fa-list-alt"
     },
     {
       "key": "IFrames",
       "component": "iframeComponent",
+      "route": "",
+      "icon": "fa fa-window-restore"
+    },
+    {
+      "key": "Load Testing",
+      "component": "",
+      "route": "/load-testing",
       "icon": "fa fa-window-restore"
     }
   ];
@@ -64,7 +77,7 @@ subMenu_optns = false;
   ) { }
 
   ngOnInit(): void {
-    this.scrollIntoView('searchComponent');
+    // this.scrollIntoView('searchComponent');
     // this.leftPanelList = this.newleftPanelList;
     // this.screenSizeChange();
 
@@ -73,24 +86,27 @@ subMenu_optns = false;
   }
 
   scrollIntoView(component) {
-    console.log('inside scroll to view')
-    if (!this.router.url.includes('portal')) {
-      this.router.navigate(['/portal']);
-    }
+    if (component != "") {
+      console.log('in if '+ component)
+      if (!this.router.url.includes('portal')) {
+        this.router.navigate(['/portal']);
+      }
+      
+      setTimeout(() => {
+        const element = document.getElementById(component);
+        const offset = 100;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
     
-    setTimeout(() => {
-      const element = document.getElementById(component);
-      const offset = 100;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-  
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }, 0);
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 0);
+    }
+
 
   }
 
@@ -136,35 +152,37 @@ subMenu_optns = false;
 
   @HostListener('window:resize', ['$event'])
   collect() {
-    let height = window.innerHeight;
-    const menu = $('ul#menu');
-    this.elemHeight = menu.height();
-    this.fixedHeight = 90;
+    if (this.leftPanelList != undefined) {
 
-    this.fitCount = Math.floor(height / this.fixedHeight) - 1;
+      const leftPanelViewLength = this.leftPanelList.length - 1;
+      let height = window.innerHeight;
+      const menu = $('ul#menu');
+      this.elemHeight = menu.height();
+      this.fixedHeight = 90;
 
-    let collectedSet = menu.children(":gt(" + this.fitCount + ")");
-    $('#submenu').empty().append(collectedSet.clone());
+      this.fitCount = Math.floor(height / this.fixedHeight) - 1;
 
-    if (this.fitCount < 6) {
-      this.showMore = true;
-    } else {
-      this.showMore = false;
+      let collectedSet = menu.children(":gt(" + this.fitCount + ")");
+      $('#submenu').empty().append(collectedSet.clone());
+
+      if (this.fitCount < leftPanelViewLength) {
+        this.showMore = true;
+      } else {
+        this.showMore = false;
+      }
+
+
+      let len = $('#submenu li').length;
+
+      if (len != 0) {
+        localStorage.setItem('COUNT', len);
+      }
+
+      let len_count = +(localStorage.getItem('COUNT'));
+      if (len_count != 0) {
+        this.hiddenSubMenuLength = localStorage.getItem('COUNT');
+      }
     }
-
-
-    let len = $('#submenu li').length;
-
-    if (len != 0){
-      localStorage.setItem('COUNT', len);
-    }
-
-    let len_count = +(localStorage.getItem('COUNT'));
-    if (len_count != 0){
-      this.hiddenSubMenuLength = localStorage.getItem('COUNT');
-    }
-
-
   }
 
 
@@ -180,18 +198,21 @@ subMenu_optns = false;
 
         $("#submenu").on('click', 'li', function(e) {
           var component = $(this).attr("id").split('_')[1];
-          console.log(component)
-          const element = document.getElementById(component);
-          const offset = 100;
-          const bodyRect = document.body.getBoundingClientRect().top;
-          const elementRect = element.getBoundingClientRect().top;
-          const elementPosition = elementRect - bodyRect;
-          const offsetPosition = elementPosition - offset;
-      
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });        
+          if (component != "") {
+            const element = document.getElementById(component);
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = element.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+        
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });    
+          } else {
+            
+          }
         });
 
     }
