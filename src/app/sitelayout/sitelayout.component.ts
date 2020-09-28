@@ -117,7 +117,7 @@ subMenu_optns = false;
   "key": "Load Testing",
   "component": "",
   "route": "/load-testing",
-  "icon": "fa fa-window-restore"
+  "icon": "fa fa-check"
   }
   ];
 
