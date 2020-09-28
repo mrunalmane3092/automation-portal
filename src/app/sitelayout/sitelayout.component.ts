@@ -160,9 +160,8 @@ subMenu_optns = false;
     }
 
     let len_count = localStorage.getItem('COUNT');
-    if (len_count != 0){
+    if (parseInt(len_count) != 0){
       this.hiddenSubMenuLength = localStorage.getItem('COUNT');
-
     }
 
 
