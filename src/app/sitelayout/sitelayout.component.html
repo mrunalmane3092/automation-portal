@@ -6,11 +6,11 @@
             <ul class="nav navbar-nav displayBlock" id="navbar_ul">
                 <li class="active" id="home"><a routerLink="/portal">Home</a></li>
                 <li id="about"><a routerLink="/about">About</a></li>
-                <li class="dropdown" id="services">
+                <li class="dropdown" id="testing">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="true"> <span class="nav-label">Services</span> <span class="caret"></span></a>
+                        aria-expanded="true"> <span class="nav-label">Testing</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Service A</a></li>
+                        <li><a routerLink="/load-testing">Load Testing</a></li>
                         <li><a href="#">Service B</a></li>
                     </ul>
                 </li>
@@ -46,7 +46,7 @@
                           </div> -->
                         <ol *ngIf="showMore">
                             <li (click)="showOptns()" id="more_btn">
-                                More <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                More ({{hiddenSubMenuLength}}) <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 <ul id="submenu"></ul>
                             </li>
                         </ol>
