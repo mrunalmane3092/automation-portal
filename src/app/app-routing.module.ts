@@ -5,7 +5,8 @@ import { PortalComponent } from '../app/portal/portal.component';
 import { AboutComponent } from './about/about.component';
 import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
 import { WindowComponent } from './shared/window/window.component';
-
+import { LoadTestingComponent } from './load-testing/load-testing.component';
+ 
 const routes: Routes = [
   {
     path: '',
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/portal', pathMatch: 'full', },
       { path: 'portal', component: PortalComponent },
-      { path: 'about', component: AboutComponent },      
+      { path: 'about', component: AboutComponent }, 
+      { path: 'load-testing', component: LoadTestingComponent }
     ],
     runGuardsAndResolvers: 'always'
   },
