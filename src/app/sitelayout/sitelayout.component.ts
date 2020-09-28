@@ -77,10 +77,6 @@ subMenu_optns = false;
   ) { }
 
   ngOnInit(): void {
-    // this.scrollIntoView('searchComponent');
-    // this.leftPanelList = this.newleftPanelList;
-    // this.screenSizeChange();
-
     this.collect();
     $(window).resize(this.collect);
   }
@@ -104,7 +100,7 @@ subMenu_optns = false;
           top: offsetPosition,
           behavior: 'smooth'
         });
-      }, 0);
+      }, 1000);
     }
 
 
