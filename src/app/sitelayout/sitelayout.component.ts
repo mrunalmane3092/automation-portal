@@ -65,7 +65,7 @@ subMenu_optns = false;
   {
   "key": "Load Testing",
   "component": "",
-  "route": "/load-testing",
+  "route": "load-testing",
   "icon": "fa fa-check"
   }
   ];
