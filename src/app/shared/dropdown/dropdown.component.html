@@ -22,11 +22,11 @@
             <h4>
                 Bootstrap drop-down list 1
             </h4>
-            <div>
+            <div class="positionRelative">
                 <button id="bootstrapDropDown" class="btn  btn-green dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
                     <span class="caret"></span>
                 </button>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu dropdown-menu-1">
                     <p class="padding5 marginBottom-0" id="ddMenu_0"><a href="">HTML</a></p>
                     <p class="padding5 marginBottom-0" id="ddMenu_1"><a href="">CSS</a></p>
                     <p class="padding5 marginBottom-0" id="ddMenu_2"><a href="">JavaScript</a></p>
@@ -41,7 +41,7 @@
                 <button id="bootstrapDropDownCopy" class="btn  btn-green dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
                     <span class="caret"></span>
                 </button>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu positionRelative">
                     <p class="padding5 marginBottom-0" id="ddMenu_{{i}}" *ngFor="let list of bootstrapDropDown; index as i">
                         <a href="{{list.link}}">{{list.val}}</a>
                     </p>
