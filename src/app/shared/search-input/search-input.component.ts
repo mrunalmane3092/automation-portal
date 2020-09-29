@@ -15,7 +15,6 @@ export class SearchInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.elemID)
     if (this.elemID != undefined){
       setTimeout(() => {
         this.getInputSearch(this.elemID);

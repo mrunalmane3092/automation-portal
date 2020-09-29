@@ -23,7 +23,6 @@ export class IframesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.iframeID);
     setTimeout(() => {
       this.iframe_id = this.iframeID;
       this.showIframe = true;

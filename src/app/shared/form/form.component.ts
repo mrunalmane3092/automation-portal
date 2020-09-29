@@ -40,7 +40,6 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.formID);
     setTimeout(() => {
       this.form_type = this.formID;
       this.showForm = true;
@@ -55,7 +54,6 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
   }
 
 }

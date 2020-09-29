@@ -86,7 +86,6 @@ subMenu_optns = false;
 
   scrollIntoView(component) {
     if (component != "") {
-      console.log('in if '+ component)
       if (!this.router.url.includes('portal')) {
         this.router.navigate(['/portal']);
       }
@@ -191,7 +190,6 @@ subMenu_optns = false;
     @HostListener('click', ['$event'])
     onClick(event) {
         if (this.eRef.nativeElement.contains(event.target)) {
-          console.log($(event.target));
           if ($(event.target)[0] != $('#submenu span')[0] && $(event.target)[0] != $('#more_btn')[0]) {
             $('#submenu').hide();
           }
