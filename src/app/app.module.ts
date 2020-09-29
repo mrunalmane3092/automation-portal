@@ -35,6 +35,7 @@ import { LoadTestingComponent } from './load-testing/load-testing.component';
     SubIframeComponent,
     WindowComponent,
     LoadTestingComponent,
+    
   ],
   imports: [
     BrowserModule,
