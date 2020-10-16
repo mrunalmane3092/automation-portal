@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 declare var $: any;
 
@@ -70,27 +71,35 @@ subMenu_optns = false;
   }
   ];
 
-
+  currentRoute;
+  getRouteURL;
   // leftPanelList;
   // moreArray=[];
   hiddenSubMenuLength;
   constructor(
     private eRef: ElementRef,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
     this.collect();
     $(window).resize(this.collect);
+    this.getRouteURL = this.router.url;
+    this.scrollIntoView('searchComponent');
   }
 
   scrollIntoView(component) {
+    this.currentRoute = this.router.url.split('?')[0];
+    console.log(this.currentRoute)
     if (component != "") {
       if (!this.router.url.includes('portal')) {
         this.router.navigate(['/portal']);
+        this.currentRoute = '/portal';
       }
       
       setTimeout(() => {
+        this.location.go(this.currentRoute+'?component='+component);
         const element = document.getElementById(component);
         const offset = 100;
         const bodyRect = document.body.getBoundingClientRect().top;
@@ -189,15 +198,26 @@ subMenu_optns = false;
 
     @HostListener('click', ['$event'])
     onClick(event) {
+      
         if (this.eRef.nativeElement.contains(event.target)) {
           if ($(event.target)[0] != $('#submenu span')[0] && $(event.target)[0] != $('#more_btn')[0]) {
             $('#submenu').hide();
           }
         } 
-
+        var url = '';
+        if (this.router.url.includes('?')) {
+          url = this.router.url.split('?')[0];
+        }
+        // if (this.getRouteURL.includes('?')) {
+        //   var url = this.getRouteURL.split('?')[0];
+        // }
+        
+        var component;
         $("#submenu").on('click', 'li', function(e) {
-          var component = $(this).attr("id").split('_')[1];
+          var self = this;
+          component = $(self).attr("id").split('_')[1];
           if (component != "") {
+
             const element = document.getElementById(component);
             const offset = 100;
             const bodyRect = document.body.getBoundingClientRect().top;
@@ -208,11 +228,25 @@ subMenu_optns = false;
             window.scrollTo({
               top: offsetPosition,
               behavior: 'smooth'
-            });    
+            });   
+            console.log(url)
+
+            locationGoTo(component);
           } else {
             
           }
         });
+        function locationGoTo(component) {
+          console.log(component)
+          console.log(url)
+          setTimeout(() => {
+            if (component != "" && url != "") {
+              this.location.go(url + '?component=' + component);
+              // this.router.navigate([url], { queryParams: { component: component}});
+            }
+          }, 1000);
+        }
+
 
     }
 
