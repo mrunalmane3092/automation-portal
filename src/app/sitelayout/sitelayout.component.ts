@@ -220,18 +220,21 @@ subMenu_optns = false;
           if (component != "") {
             component = component.split('_')[1];
             if (component != '/load-testing') {
-              const element = document.getElementById(component);
-              const offset = 100;
-              const bodyRect = document.body.getBoundingClientRect().top;
-              const elementRect = element.getBoundingClientRect().top;
-              const elementPosition = elementRect - bodyRect;
-              const offsetPosition = elementPosition - offset;
-          
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-              });
-              
+              setTimeout(() => {
+                const element = document.getElementById(component);
+                const offset = 100;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+            
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+                                
+              }, 10);
+
               this.locationGoTo(component);
             }
           }
