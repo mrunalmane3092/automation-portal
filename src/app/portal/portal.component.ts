@@ -10,13 +10,19 @@ declare var $: any;
 })
 export class PortalComponent implements OnInit {
 
-  constructor() { 
-    // private location: Location
+  currentRoute;
+  constructor(
+    private location: Location,
+    private router: Router,
 
+  ) { 
   }
 
   ngOnInit(): void {
-    // this.location.go(this.currentRoute+'?component='+component);
+    this.currentRoute = this.router.url.split('?')[0];
+
+    this.location.go(this.currentRoute+'?component=searchComponent');
+    console.log('inside')
 
     // $(() => {
     //   const parent = $('#portal_section');
