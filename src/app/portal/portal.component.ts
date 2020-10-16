@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { SitelayoutComponent } from '../sitelayout/sitelayout.component';
 
 declare var $: any;
 @Component({
@@ -14,6 +15,7 @@ export class PortalComponent implements OnInit {
   constructor(
     private location: Location,
     private router: Router,
+    private sitelayout: SitelayoutComponent
 
   ) { 
   }
@@ -21,8 +23,8 @@ export class PortalComponent implements OnInit {
   ngOnInit(): void {
     
     this.currentRoute = this.router.url.split('?')[0];
-
-    this.location.go(this.currentRoute+'?component=searchComponent');
+    this.sitelayout.scrollIntoView('searchComponent');
+    // this.location.go(this.currentRoute+'?component=searchComponent');
 
     $(() => {
       const parent = $('#portal_section');

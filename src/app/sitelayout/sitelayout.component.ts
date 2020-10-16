@@ -109,7 +109,7 @@ subMenu_optns = false;
           top: offsetPosition,
           behavior: 'smooth'
         });
-      }, 1000);
+      }, 10);
     }
 
 
@@ -232,7 +232,7 @@ subMenu_optns = false;
                 });
               this.locationGoTo(component);
                                 
-              }, 100);
+              }, 1000);
 
             }
           }
