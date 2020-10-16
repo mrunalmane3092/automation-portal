@@ -213,9 +213,9 @@ subMenu_optns = false;
         // }
         
         var component;
-        $("#submenu").on('click', 'li', function(e) {
-          var self = this;
-          component = $(self).attr("id").split('_')[1];
+        $("#submenu").on('click', 'li', (e) => {
+
+          component = e.target.id;
           if (component != "") {
 
             const element = document.getElementById(component);
@@ -228,28 +228,21 @@ subMenu_optns = false;
             window.scrollTo({
               top: offsetPosition,
               behavior: 'smooth'
-            });   
-            console.log(url)
-
-            locationGoTo(component);
+            });
+            this.locationGoTo(component);
           } else {
             
           }
         });
-        function locationGoTo(component) {
-          console.log(component)
-          console.log(url)
-          setTimeout(() => {
-            if (component != "" && url != "") {
-              this.location.go(url + '?component=' + component);
-              // this.router.navigate([url], { queryParams: { component: component}});
-            }
-          }, 1000);
-        }
-
-
     }
 
-
-
+     locationGoTo(component) {
+       console.log(component);
+       const val = this.router.url.split('?')[0];
+          // setTimeout(() => {
+            if (component != "" && val != "") {
+              this.location.go(val + '?component=' + component);
+            }
+          // }, 1);
+        }
 }
