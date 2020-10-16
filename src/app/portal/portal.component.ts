@@ -19,6 +19,7 @@ export class PortalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     this.currentRoute = this.router.url.split('?')[0];
 
     this.location.go(this.currentRoute+'?component=searchComponent');
