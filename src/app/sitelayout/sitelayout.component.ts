@@ -109,7 +109,7 @@ subMenu_optns = false;
           top: offsetPosition,
           behavior: 'smooth'
         });
-      }, 10);
+      }, 100);
     }
 
 
