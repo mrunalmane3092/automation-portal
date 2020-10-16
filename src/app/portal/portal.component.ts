@@ -24,13 +24,13 @@ export class PortalComponent implements OnInit {
 
     this.location.go(this.currentRoute+'?component=searchComponent');
 
-    // $(() => {
-    //   const parent = $('#portal_section');
-    //   const divs = parent.children();
-    //   while (divs.length) {
-    //     parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-    //   }
-    // });
+    $(() => {
+      const parent = $('#portal_section');
+      const divs = parent.children();
+      while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+      }
+    });
   }
 
 }

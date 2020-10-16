@@ -196,7 +196,6 @@ subMenu_optns = false;
 
     @HostListener('click', ['$event'])
     onClick(event) {
-      console.log(this.router.url)
         if (this.eRef.nativeElement.contains(event.target)) {
           if ($(event.target)[0] != $('#submenu span')[0] && $(event.target)[0] != $('#more_btn')[0]) {
             $('#submenu').hide();
@@ -215,7 +214,6 @@ subMenu_optns = false;
             this.router.navigate(['/portal']);
           }
           component = e.target.id;
-          console.log(component)
 
           if (component != "") {
             component = component.split('_')[1];
@@ -232,10 +230,10 @@ subMenu_optns = false;
                   top: offsetPosition,
                   behavior: 'smooth'
                 });
-                                
-              }, 10);
-
               this.locationGoTo(component);
+                                
+              }, 100);
+
             }
           }
         });
