@@ -18,6 +18,7 @@ import { IframesComponent } from './shared/iframes/iframes.component';
 import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
 import { WindowComponent } from './shared/window/window.component';
 import { LoadTestingComponent } from './load-testing/load-testing.component';
+import { IframesDisplayComponent } from './iframes-display/iframes-display.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LoadTestingComponent } from './load-testing/load-testing.component';
     SubIframeComponent,
     WindowComponent,
     LoadTestingComponent,
+    IframesDisplayComponent,
     
   ],
   imports: [
