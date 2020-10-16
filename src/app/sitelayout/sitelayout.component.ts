@@ -86,12 +86,10 @@ subMenu_optns = false;
     this.collect();
     $(window).resize(this.collect);
     this.getRouteURL = this.router.url;
-    this.scrollIntoView('searchComponent');
   }
 
   scrollIntoView(component) {
     this.currentRoute = this.router.url.split('?')[0];
-    console.log(this.currentRoute)
     if (component != "") {
       if (!this.router.url.includes('portal')) {
         this.router.navigate(['/portal']);
@@ -198,7 +196,7 @@ subMenu_optns = false;
 
     @HostListener('click', ['$event'])
     onClick(event) {
-      
+      console.log(this.router.url)
         if (this.eRef.nativeElement.contains(event.target)) {
           if ($(event.target)[0] != $('#submenu span')[0] && $(event.target)[0] != $('#more_btn')[0]) {
             $('#submenu').hide();
@@ -207,42 +205,43 @@ subMenu_optns = false;
         var url = '';
         if (this.router.url.includes('?')) {
           url = this.router.url.split('?')[0];
+        } else {
+          url = '/portal'
         }
-        // if (this.getRouteURL.includes('?')) {
-        //   var url = this.getRouteURL.split('?')[0];
-        // }
-        
+
         var component;
         $("#submenu").on('click', 'li', (e) => {
-
+          if (!this.router.url.includes('portal')) {
+            this.router.navigate(['/portal']);
+          }
           component = e.target.id;
-          if (component != "") {
+          console.log(component)
 
-            const element = document.getElementById(component);
-            const offset = 100;
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
-        
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-            this.locationGoTo(component);
-          } else {
-            
+          if (component != "") {
+            component = component.split('_')[1];
+            if (component != '/load-testing') {
+              const element = document.getElementById(component);
+              const offset = 100;
+              const bodyRect = document.body.getBoundingClientRect().top;
+              const elementRect = element.getBoundingClientRect().top;
+              const elementPosition = elementRect - bodyRect;
+              const offsetPosition = elementPosition - offset;
+          
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+              
+              this.locationGoTo(component);
+            }
           }
         });
     }
 
-     locationGoTo(component) {
-       console.log(component);
-       const val = this.router.url.split('?')[0];
-          // setTimeout(() => {
-            if (component != "" && val != "") {
-              this.location.go(val + '?component=' + component);
-            }
-          // }, 1);
-        }
+  locationGoTo(component) {
+    const val = this.router.url.split('?')[0];
+    if (component != "" && val != "") {
+      this.location.go(val + '?component=' + component);
+    }
+  }
 }

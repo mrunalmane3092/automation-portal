@@ -22,7 +22,6 @@ export class PortalComponent implements OnInit {
     this.currentRoute = this.router.url.split('?')[0];
 
     this.location.go(this.currentRoute+'?component=searchComponent');
-    console.log('inside')
 
     // $(() => {
     //   const parent = $('#portal_section');
