@@ -19,6 +19,7 @@ import { SubIframeComponent } from './shared/sub-iframe/sub-iframe.component';
 import { WindowComponent } from './shared/window/window.component';
 import { LoadTestingComponent } from './load-testing/load-testing.component';
 import { IframesDisplayComponent } from './iframes-display/iframes-display.component';
+import { BackButtonDirective } from './directives/back-button.directive';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { IframesDisplayComponent } from './iframes-display/iframes-display.compo
     WindowComponent,
     LoadTestingComponent,
     IframesDisplayComponent,
+    BackButtonDirective,
     
   ],
   imports: [

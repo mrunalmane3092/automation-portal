@@ -1,4 +1,9 @@
 <section class="portal-section" id="portal_section">
+    <button class="btn btn-purple backBtn" appBackButton>
+        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+        Go Back
+    </button>
+    
     <div class="panel-div" id="searchComponent">
         <h5 class="panel-heading">Load Testing ({{array.length * 3}} iframes)</h5>
         <div class="marginTB-10" *ngFor="let d of array; let index = index">
