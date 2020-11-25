@@ -92,7 +92,7 @@ subMenu_optns = false;
     this.currentRoute = this.router.url.split('?')[0];
     if (component != "") {
       if (!this.router.url.includes('portal')) {
-        this.router.navigate(['/portal']);
+        this.router.navigate(['/portal', { relativeTo: '' }]);
         this.currentRoute = '/portal';
       }
       
