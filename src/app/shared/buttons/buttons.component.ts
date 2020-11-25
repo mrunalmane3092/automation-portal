@@ -14,11 +14,11 @@ export class ButtonsComponent implements OnInit {
   }
 
   openNewTab() {
-    window.open('/#/about', '_blank');
+    window.open('/about', '_blank');
   }
 
   openNewWindow() { 
-    window.open('/#/window', '/#/window', 'width=800,height=400,left=200,top=200');
+    window.open('/window', '/window', 'width=800,height=400,left=200,top=200');
   }
 
   constructor() { }
