@@ -1,0 +1,38 @@
+.selectList {
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.bootstrapDropDown {
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+    position: relative;
+
+}
+
+.positionRelative {
+    position: relative;
+}
+
+
+
+.dropdown-menu {
+    top: 90px!important;
+    left: 209px !important;
+    width: 200px!important;
+    transform: translate3d(0px, -0px, 0px)!important;
+
+    p:hover {
+        background-color: #74ccbd;
+    }
+}
+
+.dropdown-menu-1 {
+    top: 51px !important;
+    left: 192px !important;
+    width: 200px !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+
+}

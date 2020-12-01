@@ -1,0 +1,18 @@
+.window-section{
+    min-height: calc(100vh - 50px);
+    padding-bottom: 50px;
+
+    .panel-div{
+        margin: 10px 30px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: 1px solid #dcdcdc;
+        display: grid;
+
+        .demo-btn{
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}

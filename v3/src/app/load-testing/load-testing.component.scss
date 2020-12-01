@@ -1,0 +1,30 @@
+.portal-section{
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    .panel-div{
+        margin: 30px 30px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: 1px solid #dcdcdc;
+        display: grid;
+        border-top: 2px solid #5e5f7b;
+
+        .panel-heading{
+            background-color: #64657b;
+            padding: 11px 20px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px
+        }
+    }
+}
+
+
+.iframe-div{
+    padding: 10px;
+    border: 1px solid #a7a7a7;
+    background-color: #eaeaea;
+    border-radius: 6px;
+}

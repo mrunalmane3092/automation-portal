@@ -1,0 +1,118 @@
+<div *ngIf="showForm">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="info-form">
+        <div class="form-group">
+            <label for="firstName" class="width-100-percent font13">
+                First Name:
+                <input type="text" formControlName="firstName" id="{{form_type}}_firstName" class="form-control" required>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName" class="width-100-percent font13">
+                Last Name:
+                <input type="text" formControlName="lastName" id="{{form_type}}_lastName" class="form-control">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="contact_num" class="width-100-percent font13">
+                Contact Number:
+                <input type="number" formControlName="contact_num" id="{{form_type}}_contact_num" class="form-control">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="dob" class="width-100-percent font13">
+                DOB:
+                <input type="date" formControlName="dob" id="{{form_type}}_dob" class="form-control">
+            </label>
+        </div>
+
+        <div formGroupName="address">
+            <h5>Address</h5>
+            <div class="form-group">
+                <label for="street" class="width-100-percent font13">
+                    Street:
+                    <textarea type="text" formControlName="street" id="{{form_type}}_street" class="form-control"></textarea>
+                </label>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="city" class="width-100-percent font13">
+                    City:
+                    <input type="text" formControlName="city" id="{{form_type}}_city" class="form-control">
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{form_type}}_exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Option 1
+                    </label>
+                </div>
+                <div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{form_type}}_exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Option 2
+                    </label>
+                </div>
+                <div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="radio" name="exampleRadios" id="{{form_type}}_exampleRadios3" value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        Option 3
+                    </label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{form_type}}_defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Checkbox 1
+                    </label>
+                </div><div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{form_type}}_defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 2
+                    </label>
+                </div><div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{form_type}}_defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">
+                        Checkbox 3
+                    </label>
+                </div><div class="form-check displayFlex">
+                    <input class="form-check-input marginRight-10" type="checkbox" value="" id="{{form_type}}_defaultCheck4">
+                    <label class="form-check-label" for="defaultCheck4">
+                        Checkbox 4
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div formArrayName="aliases">
+            <h5>Aliases</h5>
+
+            <div *ngFor="let alias of aliases.controls; let i=index">
+                <!-- The repeated alias template -->
+                <div class="form-group">
+                    <label class="width-100-percent">
+                        Alias:
+                        <input type="text" [formControlName]="i" id="{{form_type}}_i">
+                    </label>
+                </div> 
+            </div>
+
+            <button (click)="addAlias()" class="add-alias btn btn-purple">Add Alias</button>
+        </div>
+
+        <div>
+            <button type="submit" class="add-save btn btn-green" [disabled]="!profileForm.valid">Submit Form</button>
+        </div>
+    </form>
+</div>

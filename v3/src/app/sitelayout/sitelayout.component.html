@@ -1,0 +1,74 @@
+<section class="siteLayout" (window:resize)="collect()">
+    <div class="displayBlock width-100-percent height50 navbar-div" id="navbar_div">
+        <div>
+            <img class="myGuideLogo" src="../../assets/images/my-guide-logo.png">
+            <span class="automation-portal-title">Automation Portal</span>
+            <ul class="nav navbar-nav displayBlock" id="navbar_ul">
+                <li class="active" id="home"><a routerLink="/portal">Home</a></li>
+                <li id="about"><a routerLink="/about">About</a></li>
+                <li class="dropdown" id="testing">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="true"> <span class="nav-label">Testing</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/load-testing">Load Testing</a></li>
+                        <li><a routerLink="iframes-display">IFrames Display</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="displayFlex">
+        <aside id="left-panel" class="left-panel">
+            <nav class="navbar navbar-expand-sm nopadding">
+                <!-- <div class="navbar-header">
+                    <button class="navbar-toggler navbar-menuBtn" type="button" data-toggle="collapse"
+                        data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div> -->
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <div class="sidenavHeight">
+                        <ul class="nav navbar-nav navList" id="menu">
+                            <li *ngFor="let optns of leftPanelList; index as i" (click)="scrollIntoView(optns.component)" id="li_{{optns.component}}" class="pointer">
+                                <a class="displayGrid textAlignCenter textColorWhite padding2" *ngIf="optns.route != ''" routerLink="{{optns.route}}" id="a_{{optns.route}}">
+                                    <i class="displayBlock marginAuto leftPanelIcon {{optns.icon}}" aria-hidden="true"></i>
+                                    <span  id="span_{{optns.route}}">{{optns.key}}</span>
+                                </a>
+                                <div class="displayGrid textAlignCenter" *ngIf="optns.route == ''" id="div_{{optns.component}}">
+                                    <i class="marginAuto leftPanelIcon {{optns.icon}}" aria-hidden="true"></i>
+                                    <span  id="span_{{optns.component}}">{{optns.key}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <div class="dropdown">
+                            <button class="dropbtn">More ({{moreArray.length}}) </button>
+                            <div class="dropdown-content">
+                              <p *ngFor="let data of moreArray">{{data.key}}</p>
+                            </div>
+                          </div> -->
+                        <ol *ngIf="showMore">
+                            <li (click)="showOptns()" id="more_btn">
+                                More ({{hiddenSubMenuLength}}) <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <ul id="submenu"></ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        <div id="right-panel" class="right-panel">
+            <router-outlet></router-outlet>
+            <div class="footer">
+                <p class="pull-left">Copyright © - MyGuide by EdCast.</p>
+                <p class="pull-right">Need any help, please mail us at
+                    <b>
+                        <a href="mailto:support@edcast.com" class="supportLink">support@edcast.com</a>
+                    </b>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+

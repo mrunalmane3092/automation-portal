@@ -1,0 +1,196 @@
+
+body {
+    background-color: #f1f2f7;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+button, li, input, a, select {
+    outline: none!important;
+}
+
+$displays: (
+    "Flex": flex!important,
+    "Block": block!important,
+    "None": none,
+    "InlineFlex": inline-flex,
+    "Initial": initial,
+    "Inline": inline,
+    "Content": contents,
+    "InlineBlock": inline-block,
+    "Inherit": inherit,
+    "Grid": grid,
+);
+@each $name, $dis in $displays {
+    .display#{$name} {
+        display: $dis;
+    }
+}
+
+
+$heights: 0, 10, 50, inherit;
+@each $height in $heights {
+    .height#{$height} {
+        @if $height==inherit {
+            height: inherit !important;
+        } @else {
+            height: #{$height}px !important;
+        }
+    }
+}
+
+$sizes: 10, 11, 12, 13, 14, 18, 20, 28;
+@each $size in $sizes {
+    .font#{$size} {
+        font-size: #{$size}px !important;
+    }
+}
+
+$paddings: 0, 2, 5, 10, 50;
+@each $padding in $paddings {
+    .padding#{$padding} {
+        padding: #{$padding}px !important;
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.width-100-percent{
+    width: 100%;
+}
+
+
+.alignCenter{
+    align-items: center;
+}
+
+.margin-0-auto{
+    margin: 0 auto;
+}
+
+.ui-autocomplete {
+    font-size: 13px;
+
+    .ui-menu-item{
+        border-bottom: 1px solid #b8b8bb;
+        padding: 5px 0px;
+
+        img{
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.dataTables_filter{
+    label{
+        float: right!important;
+    }
+}
+.dataTables_length{
+    label{
+        font-size: 13px!important;
+    }
+}
+
+.paging_simple_numbers{
+    .pagination{
+        float: right!important;
+    }
+}
+
+.marginTB-10 {
+    margin: 10px 0px;
+}
+
+.marginBottom-0 {
+    margin-bottom: 0px;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.btn {
+    height: 40px;
+    padding: 0px 15px 1px;
+    border-radius: 4px;
+    background-size: cover;
+    font-size: 16px;
+    color: #ffffff!important;
+    text-decoration: none solid rgb(255, 255, 255)!important;
+    text-align: center;
+    outline-offset: 0px!important;
+    font-size: 14px;
+    outline: none!important;
+
+}
+
+.btn-green {
+    background-color: #38b6a0;
+
+    &:hover {
+        background-color: #2f9987;
+    }
+
+    &:focus {
+        background-color: #288070;
+    }
+
+    &:active {
+        background-color: #2b6c60;
+    }
+
+}
+
+.btn-purple {
+    background-color: #9476c9;
+
+    &:hover {
+        background-color: #7a62ab;
+    }
+
+    &:focus {
+        background-color: #695696;
+    }
+
+    &:active {
+        background-color: #594985;
+    }
+
+}
+
+a {
+    color: #454560!important;
+    text-decoration: none!important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: inherit!important;
+}
+.navbar-nav>li>.dropdown-menu {
+    transform: translate3d(-42px, 49px, 0px)!important;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, 
+.pagination>.active>a:hover, .pagination>.active>span, 
+.pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 0!important;
+    color: #fff!important;
+    cursor: default;
+    background-color: #38b6a0!important;
+    border-color: #38b6a0!important;
+}
+#submenu .leftPanelIcon {
+    display:none;
+}
+
+.backBtn {
+    margin: 15px 30px;
+}

@@ -1,0 +1,51 @@
+<div class="col-lg-12 marginTB-10">
+    <div class="row textAlignCenter padding10">
+        <div class="col-lg-6 displayBlock">
+            <h4>
+                HTML Select drop-down list 1
+            </h4>
+            <select class="selectList" name="selectList" id="selectList">
+                <option id="optnId_{{i}}" value="{{option.value}}" *ngFor="let option of selectDropDown; index as i">{{option.option}}</option>
+            </select>
+        </div>
+        <div class="col-lg-6 displayBlock">
+            <h4>
+                HTML Select drop-down list 2
+            </h4>
+            <select class="selectList" name="selectListCopy" id="selectListCopy">
+                <option id="optnId_{{i}}" value="{{option.value}}" *ngFor="let option of selectDropDowncopy; index as i">{{option.option}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row textAlignCenter padding10">
+        <div class="col-lg-6 displayBlock">
+            <h4>
+                Bootstrap drop-down list 1
+            </h4>
+            <div class="positionRelative">
+                <button id="bootstrapDropDown" class="btn  btn-green dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span>
+                </button>
+                    <div class="dropdown-menu dropdown-menu-1">
+                    <p class="padding5 marginBottom-0" id="ddMenu_0"><a href="">HTML</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_1"><a href="">CSS</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_2"><a href="">JavaScript</a></p>
+                    <p class="padding5 marginBottom-0" id="ddMenu_3"><a href="">PHP</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 displayBlock">
+            <h4>
+                Bootstrap drop-down list 2
+            </h4>
+                <button id="bootstrapDropDownCopy" class="btn  btn-green dropdown-toggle bootstrapDropDown" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu positionRelative">
+                    <p class="padding5 marginBottom-0" id="ddMenu_{{i}}" *ngFor="let list of bootstrapDropDown; index as i">
+                        <a href="{{list.link}}">{{list.val}}</a>
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
